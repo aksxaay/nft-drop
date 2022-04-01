@@ -60,3 +60,18 @@ this was required since I'm using `yarn`
 
 `works`
 now that I'm all done let's get back to sonny's vid.
+
+Let's try out commit subjects
+
+> added prettier functionality + tailwind class sorting
+
+wait this thing is formatting even `.md` files
+had to add `.prettierignore` where `*.md`
+
+which didn't do anything boy wth
+
+>hello
+
+also this file is outside the prettier thing. oh lord
+
+set it globally and now it works good boi.
