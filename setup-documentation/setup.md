@@ -101,3 +101,10 @@ in between padding elements
 on large screen we need grid
 
 don't use strong ig, stick to span.
+
+so when I would resize the window I don't want to let it go smaller than a certain amount.
+
+just added
+
+```body {  min-width:600px; }```
+and this sorta fixed it? however it isn't true over at the 600px
