@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by <strong>ºdissonance</strong>{' '}
+          Powered by <span className="font-semibold">ºdissonance</span>{' '}
         </a>
       </footer>
     </div>

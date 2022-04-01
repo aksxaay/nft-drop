@@ -99,3 +99,5 @@ in between padding elements
 
 `lg:grid`
 on large screen we need grid
+
+don't use strong ig, stick to span.

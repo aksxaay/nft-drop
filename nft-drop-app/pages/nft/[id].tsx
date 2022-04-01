@@ -21,9 +21,22 @@ function NFTDropPage() {
       </div>
 
       {/* RIGHT */}
-      <div>
+      <div className="flex flex-1 flex-col p-12 lg:col-span-6">
         {/* Header */}
+        <header className="flex items-center justify-between">
+          <h1 className="w-52 cursor-pointer text-xl font-extralight">
+            The{' '}
+            <span className="font-extrabold underline decoration-purple-600/70">
+              ºDISSoNANCE
+            </span>{' '}
+            Marketplace
+          </h1>
+          <button className="lg-py:3 rounded-full bg-purple-500 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:text-base">
+            Sign In
+          </button>
+        </header>
 
+        <hr className="my-2 border" />
         {/* Content */}
 
         {/* Mint Button */}
