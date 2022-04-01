@@ -7,3 +7,4 @@ Tools Used
 - Sanity CMS
 - Tailwind
 - thirdweb
+- tailwindCSS
