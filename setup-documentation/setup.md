@@ -75,3 +75,27 @@ which didn't do anything boy wth
 also this file is outside the prettier thing. oh lord
 
 set it globally and now it works good boi.
+
+anyways
+
+so the slug auto does it..
+`/nft-drop-app/pages/nft/[id].tsx`
+so this can have anything in the browser's path 
+`http://localhost:3000/nft/apes`
+shows me the output
+
+
+we're starting with mobile first.
+
+```
+background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+```
+
+`lg:min-h-screen`
+this property makes it fullscreen the left side part.
+
+`space-y-2`
+in between padding elements
+
+`lg:grid`
+on large screen we need grid
