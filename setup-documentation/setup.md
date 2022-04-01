@@ -108,3 +108,40 @@ just added
 
 ```body {  min-width:600px; }```
 and this sorta fixed it? however it isn't true over at the 600px
+
+**Basic Front-end is done** completely static!!
+
+we're moving onto
+### third-web
+[thirdweb react // documentation](https://docs.thirdweb.com/react)
+```
+npm install @thirdweb-dev/react @thirdweb-dev/sdk ethers
+```
+
+we're using third web as a higher-order component
+but in layman's we're basically wrapping the entire application
+
+once we do the wrapping, we can use thirdweb in the entire application now.
+
+just do that stuff, 
+change their `ChainId` -> `Rinkeby`
+now we're on rinkeby
+
+`_app.tsx`
+```
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react'
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThirdwebProvider desiredChainId={ChainId.Rinkeby}>
+      <Component {...pageProps} />
+    </ThirdwebProvider>
+  )
+}
+
+export default MyApp
+
+```
