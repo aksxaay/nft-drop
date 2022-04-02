@@ -1,6 +1,16 @@
 import React from 'react'
+import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
 
 function NFTDropPage() {
+  // AUTH
+  const connectWithMetamask = useMetamask()
+  const address = useAddress()
+  const disconnect = useDisconnect()
+
+  console.log('address=', address)
+
+  // ---
+
   return (
     <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
       {/* LEFT */}
@@ -14,7 +24,7 @@ function NFTDropPage() {
             />
           </div>
           <div className="space-y-2 p-5 text-center">
-            <h1 className="text-4xl font-bold text-black">H1 Ether</h1>
+            <h1 className="text-4xl font-bold text-black">Ξther</h1>
             <h2>A collection or cringe I live and breathe Linux</h2>
           </div>
         </div>
@@ -31,12 +41,26 @@ function NFTDropPage() {
             </span>{' '}
             Marketplace
           </h1>
-          <button className="lg-py:3 rounded-full bg-purple-500 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:text-base">
-            Sign In
+          <button
+            onClick={() => (address ? disconnect() : connectWithMetamask())}
+            className="lg-py:3 rounded-full bg-purple-500 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:text-base"
+          >
+            {address
+              ? String.fromCharCode(10687) + ' ' + 'Connected'
+              : 'Sign In'}
           </button>
         </header>
 
         <hr className="my-4 border" />
+        {address && (
+          <p className="text-center text-sm text-purple-500">
+            You're logged in with wallet{' '}
+            <span className="font-semibold">
+              {address.substring(0, 5)}...
+              {address.substring(address.length - 5)}
+            </span>
+          </p>
+        )}
 
         {/* Content */}
         <div className="flex flex-col items-center space-y-3 text-center lg:justify-center lg:space-y-2">

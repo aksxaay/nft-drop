@@ -145,3 +145,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp
 
 ```
+
+all I had to do was import 3 components from `@thirdweb-dev/react` as `useAddress, useDisconnect, useMetamask`
+
+had to call them as methods on a variable.
+and then just do an arrow `onClick()` function
+on the sign-in button
