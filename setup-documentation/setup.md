@@ -151,3 +151,22 @@ all I had to do was import 3 components from `@thirdweb-dev/react` as `useAddres
 had to call them as methods on a variable.
 and then just do an arrow `onClick()` function
 on the sign-in button
+
+makes it also display what wallet is currently connected
+
+## Day 3
+### sanity.io
+we're using sanity.io as the backend cms.
+`npm install -g @sanity/ci`
+`sanity init --coupon sonny2022` - apparently gives you double of everything to use in sanity.
+
+Which is great lol.
+
+Project Name: `nft-drop-app`
+create default dataset configuration
+
+Project output path: `sanity`
+
+`blog` saniy template
+
+we're creating a `.env file for all sensitive content`
