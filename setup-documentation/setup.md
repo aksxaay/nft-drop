@@ -236,3 +236,25 @@ oh yeah in the local env I forgot to add production dataset
 basically this shit fucked me over
 ```token: 'sanity-auth-token',```
 this shit apparently needed authentication on every fucking page.
+
+
+
+**Building out the homepage**
+had to fix sumn else on the `sanity.js`
+we finally pulled in the main dissonance image from the sanity backend WOOHOO.
+
+used something like a sticky footer.
+
+**SSR pt 2**
+
+in id we need the slug value
+
+very dynamic route. ez
+we get a 404 page that doesn't mess up.
+
+Then converted most of the id elements from static to dynamic.
+
+`urlFor` interesting.
+
+also inspect the `Props`, `interface` and  `getServerSideProps`
+these are def things I need to pick up upon.

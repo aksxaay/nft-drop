@@ -1,7 +1,13 @@
 import React from 'react'
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
+import { GetServerSideProps } from 'next'
+import { sanityClient, urlFor } from '../../sanity'
 
-function NFTDropPage() {
+interface Props {
+  collection: Collection
+}
+
+function NFTDropPage({ collection }: Props) {
   // AUTH
   const connectWithMetamask = useMetamask()
   const address = useAddress()
@@ -14,14 +20,20 @@ function NFTDropPage() {
   return (
     <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
       {/* LEFT */}
-      <div className="bg-gradient-to-br from-cyan-100 to-green-300 lg:col-span-4">
+      <div className="bg-gradient-to-br from-cyan-100 to-purple-300 lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-2 lg:min-h-screen">
-          <div className="rounded-full bg-gradient-to-br from-purple-300 to-pink-600 p-5">
+          <div className="rounded-xl bg-gradient-to-br from-purple-300 to-pink-600 p-2">
+            {/* preview image replacement */}
             <img
+              className="w-44 rounded-xl object-cover lg:h-72 lg:w-72"
+              src={urlFor(collection.previewImage).url()}
+              alt=""
+            />
+            {/* <img
               className="w-44 rounded-xl object-cover lg:h-72 lg:w-72"
               src="https://assets-global.website-files.com/5f973c970bea5548ad4287ef/61e70d05f3c7146ab79e66bb_ethereum-eth.svg"
               alt=""
-            />
+            /> */}
           </div>
           <div className="space-y-2 p-5 text-center">
             <h1 className="text-4xl font-bold text-black">Ξther</h1>
@@ -35,9 +47,9 @@ function NFTDropPage() {
         {/* Header */}
         <header className="flex items-center justify-between">
           <h1 className="w-[20rem] cursor-pointer text-xl font-extralight">
-            The{' '}
+            <span className="font-extrabold">º</span>
             <span className="font-extrabold underline decoration-purple-600/70">
-              ºDISSoNANCE
+              DISSoNANCE
             </span>{' '}
             Marketplace
           </h1>
@@ -67,14 +79,14 @@ function NFTDropPage() {
           <section className="container flex h-40 flex-col items-center justify-center lg:h-80">
             <img
               className="h-full rounded-[5em] object-cover p-4 lg:h-full lg:w-full lg:p-10"
-              src="https://pbs.twimg.com/profile_banners/1245612768859811844/1637764821/600x200"
+              src={urlFor(collection.mainImage).url()}
               alt=""
             />
           </section>
           <hr className="my-4 border" />
 
           <h1 className="text-3xl font-bold lg:text-5xl lg:font-extrabold">
-            Hoodie Gang
+            {collection.title}
           </h1>
           <p className="mt-2 text-sm text-green-500 lg:text-xl">
             13/25 NFTs claimed
@@ -92,3 +104,47 @@ function NFTDropPage() {
 }
 
 export default NFTDropPage
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const query = `*[_type == "collection" && slug.current == $id][0]{
+    _id,
+    title,
+    address,
+    description,
+    nftCollectionName,
+    mainImage {
+     asset
+  },
+  previewImage {
+    asset
+  },
+  slug {
+    current
+  },
+  creator-> {
+    _id,
+    name,
+    address,
+    slug {
+    current
+  },
+  },
+  
+  }`
+  const collection = await sanityClient.fetch(query, {
+    id: params?.id,
+  })
+
+  // 404 page
+  if (!collection) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      collection,
+    },
+  }
+}
