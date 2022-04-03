@@ -216,3 +216,23 @@ Claim Phases
 ```https://rinkeby.etherscan.io/tx/0x2e3fd3450d22cb22522a73daeefc1238149de9fa0743b68c85b7d4a2e6689264```
 
 basically I got it.
+
+**Implementing Server Side Rendering**
+arrow function `getServerSideProps` destructuring the params
+since we're using typescript it gives us valuable feedback
+
+go to sanity studio go to `vision` tab on there
+
+we're using props as we normally would.
+
+Typescript shenanigans
+
+
+getting 
+`Error dataset must be provided to perform queries`
+oh yeah in the local env I forgot to add production dataset
+
+
+basically this shit fucked me over
+```token: 'sanity-auth-token',```
+this shit apparently needed authentication on every fucking page.
