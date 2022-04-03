@@ -169,4 +169,16 @@ Project output path: `sanity`
 
 `blog` saniy template
 
-we're creating a `.env file for all sensitive content`
+we're creating a `.env` file for all sensitive content
+actually `.env.local` which does not get picked up by git which is interesting because this is how I lost my first password bruh.
+
+
+```yarn add next-sanity @sanity/image-url```
+
+
+```yarn add node-env-file```
+for processing env files.
+
+
+Sanity Studio
+`sanity start`
