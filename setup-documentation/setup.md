@@ -181,4 +181,38 @@ for processing env files.
 
 
 Sanity Studio
+>React app that connects to the hosted API with all your blog content
 `sanity start`
+> sanity start fails to compile hence I cannot get the studio up and running.
+
+damn these schema shits complex.
+can't fuck anything up.
+
+bruh I had to remove all other instances / mentions for it to work.
+
+
+### thirdweb
+go to [thirdweb dashboard](https://thirdweb.com/dashboard)
+apparently they don't take any fees and I own 100% of the contract, I have no idea what's in it for them.
+
+choose `drop` option.
+Deploy -> pay using ethereum
+
+> 0.00123934ETH
+Deploy proxy ->  is the function
+this what it costs rn
+
+
+```https://rinkeby.etherscan.io/tx/0x5113ff0b8e5b4c3f27a6fbd026ee4312b93234a1a45165b4c7aea9a361c62469```
+this is our first ever deploy
+
+I keep adding in assets, so now I had to drop another item
+now triggering the smart contract
+`lazy mint`
+tx
+```https://rinkeby.etherscan.io/tx/0xa5f17c0c1e6c0084cca21c2ec0a5f6d45bc3e2d347ed7c737b57c32d4305ee30```
+
+Claim Phases
+```https://rinkeby.etherscan.io/tx/0x2e3fd3450d22cb22522a73daeefc1238149de9fa0743b68c85b7d4a2e6689264```
+
+basically I got it.
