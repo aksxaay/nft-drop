@@ -17,7 +17,8 @@
     "node-env-file": "^0.1.8",
     "npm-check-updates": "^12.5.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.4",

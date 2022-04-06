@@ -10,6 +10,7 @@ import { sanityClient, urlFor } from '../../sanity'
 import Link from 'next/link'
 import { BigNumber } from 'ethers'
 import { Collection } from '../../sanity/typings'
+import toast, { Toaster } from 'react-hot-toast'
 
 interface Props {
   collection: Collection
@@ -67,6 +68,17 @@ function NFTDropPage({ collection }: Props) {
     // TODO: implement a custom button for different amount of NFTs
     const quantity = 1
 
+    setLoading(true)
+    const notification = toast.loading('Minting..', {
+      style: {
+        background: 'white',
+        color: 'green',
+        fontWeight: 'bolder',
+        fontSize: '17px',
+        padding: '20px',
+      },
+    })
+
     nftDrop
       .claimTo(address, quantity)
       .then(async (tx) => {
@@ -74,18 +86,41 @@ function NFTDropPage({ collection }: Props) {
         const claimedTokenId = tx[0].id // id of NFT
         const claimedNFT = await tx[0].data() // claimed NFT metadata
 
+        toast('HOORAY.. You Successfully Minted', {
+          duration: 8000,
+          style: {
+            background: 'white',
+            color: 'green',
+            fontWeight: 'bolder',
+            fontSize: '17px',
+            padding: '20px',
+          },
+        })
+
         // notification
       })
       .catch((err) => {
         console.log(err)
+        toast('Whoops... Something went wrong!', {
+          style: {
+            background: 'red',
+            color: 'green',
+            fontWeight: 'bolder',
+            fontSize: '17px',
+            padding: '20px',
+          },
+        })
       })
       .finally(() => {
         setLoading(false)
+        toast.dismiss(notification)
       })
   }
 
   return (
     <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
+      <Toaster position="bottom-center" />
+
       {/* LEFT */}
       <div className="bg-gradient-to-br from-cyan-100 to-purple-300 lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-2 lg:min-h-screen">

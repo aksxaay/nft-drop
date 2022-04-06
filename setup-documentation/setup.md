@@ -361,3 +361,6 @@ also implemented NFT functions.
 make the NFT popup, with the attributes so that is apparenty upto us.
 
 **mint successful**
+
+
+we're getting hot toast alert notifications

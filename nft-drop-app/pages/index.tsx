@@ -49,12 +49,7 @@ const Home = ({ collections }: Props) => {
         </main>
       </div>
       <footer className="h- fixed inset-x-0 bottom-0 mx-auto flex w-full flex-col items-center justify-center border-t bg-cyan-300">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="flex items-center justify-center gap-2">
           Powered by <span className="font-semibold">ºdissonance</span>{' '}
         </a>
       </footer>
