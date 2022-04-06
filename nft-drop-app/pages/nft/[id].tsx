@@ -1,21 +1,53 @@
-import React from 'react'
-import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
+import React, { useEffect, useState } from 'react'
+import {
+  useAddress,
+  useDisconnect,
+  useMetamask,
+  useNFTDrop,
+} from '@thirdweb-dev/react'
 import { GetServerSideProps } from 'next'
 import { sanityClient, urlFor } from '../../sanity'
+import Link from 'next/link'
+import { BigNumber } from 'ethers'
+import { Collection } from '../../sanity/typings'
 
 interface Props {
   collection: Collection
 }
 
 function NFTDropPage({ collection }: Props) {
+  // console.log('collection' + JSON.stringify(collection))
+  const [claimedSuppy, setClaimedSupply] = useState<number>(0)
+  const [totalSupply, setTotalSupply] = useState<BigNumber>()
+  const [loading, setLoading] = useState<boolean>(true)
+  // thridweb drop contract
+  const nftDrop = useNFTDrop(collection.address)
+
   // AUTH
   const connectWithMetamask = useMetamask()
   const address = useAddress()
   const disconnect = useDisconnect()
 
-  console.log('address=', address)
-
+  // console.log('address=', address)
   // ---
+
+  useEffect(() => {
+    if (!nftDrop) return
+    const fetchNFTDropData = async () => {
+      setLoading(true)
+
+      // console.log('before claimed')
+      const claimed = await nftDrop.getAllClaimed()
+      // console.log('claimed' + claimed)
+      const total = await nftDrop.totalSupply()
+      // console.log('total' + total)
+      setClaimedSupply(claimed.length)
+      setTotalSupply(total)
+
+      setLoading(false)
+    }
+    fetchNFTDropData()
+  }, [nftDrop])
 
   return (
     <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
@@ -46,13 +78,15 @@ function NFTDropPage({ collection }: Props) {
       <div className="flex flex-1 flex-col p-12 lg:col-span-6">
         {/* Header */}
         <header className="flex items-center justify-between">
-          <h1 className="w-[20rem] cursor-pointer text-xl font-extralight">
-            <span className="font-extrabold">º</span>
-            <span className="font-extrabold underline decoration-purple-600/70">
-              DISSoNANCE
-            </span>{' '}
-            Marketplace
-          </h1>
+          <Link href="/">
+            <h1 className="w-[20rem] cursor-pointer text-xl font-extralight">
+              <span className="font-extrabold">º</span>
+              <span className="font-extrabold underline decoration-purple-600/70">
+                DISSoNANCE
+              </span>{' '}
+              Marketplace
+            </h1>
+          </Link>
           <button
             onClick={() => (address ? disconnect() : connectWithMetamask())}
             className="lg-py:3 rounded-full bg-purple-500 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:text-base"
@@ -88,13 +122,35 @@ function NFTDropPage({ collection }: Props) {
           <h1 className="text-3xl font-bold lg:text-5xl lg:font-extrabold">
             {collection.title}
           </h1>
-          <p className="mt-2 text-sm text-green-500 lg:text-xl">
-            13/25 NFTs claimed
-          </p>
+
+          {/* loading animation */}
+          {loading ? (
+            <p className="pt-2 text-sm text-green-500">
+              Loading Supply Count...
+            </p>
+          ) : (
+            <p className="mt-2 text-sm text-green-500 lg:text-xl">
+              {claimedSuppy} / {totalSupply?.toString()} NFT's claimed
+            </p>
+          )}
         </div>
 
         {/* Mint Button */}
-        <button className="m-5 h-16 rounded-full bg-cyan-700 text-white">
+        <button
+          // disabled={
+          //   loading || claimedSuppy === totalSupply?.toNumber() || !address
+          // }
+          className="m-5 h-16 rounded-full bg-cyan-700 text-white disabled:bg-gray-400"
+        >
+          {/* {loading ? (
+            <>Loading</>
+          ): claimedSuppy === totalSupply?.toNumber() ? (
+            <>SOLD OUT!</>
+          ): !address ?(
+            <>Sign in to Mint :D</>
+          ): (
+
+          )} */}
           Mint NFT <span className="font-bold">(0.01 ΞTH)</span>
         </button>
         <div></div>

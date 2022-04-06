@@ -19,9 +19,9 @@ const Home = ({ collections }: Props) => {
         </Head>
         {/* dissonance HEADER */}
         <h1 className="w-[20rem] cursor-pointer text-xl font-extralight">
-          The{' '}
+          <span className="font-extrabold">º</span>
           <span className="font-extrabold underline decoration-purple-600/70">
-            ºDISSoNANCE
+            DISSoNANCE
           </span>{' '}
           Marketplace
         </h1>

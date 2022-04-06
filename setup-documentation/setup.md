@@ -258,3 +258,86 @@ Then converted most of the id elements from static to dynamic.
 
 also inspect the `Props`, `interface` and  `getServerSideProps`
 these are def things I need to pick up upon.
+
+
+### Day 4
+Create State in React
+short term memory
+
+`useState` and `useEffect`
+when page loads what am I going to go ahead and execute.
+
+watch `useEffect` tutorial lmfao.
+> Side Effects on a functional component
+
+lifecycle methods
+components mounts and unmounts.
+
+about to render, after render, receives new props, execute piece of code
+this is new and functional programming.
+
+functional component and class based component.
+
+**summary**
+useEffect with no array dependency - re-render
+useEffect with empty array dependency - component mount
+useEffect with non-empty array dependency - unmount.
+
+import `useNFTDrop` from thirdweb
+
+damn the tooling is fucking insane.
+auto-imports are fucking welcome as shit.
+
+Unhandled Runtime Error
+Error: invalid address (argument="address", value="0x5113ff0b8e5b4c3f27a6fbd026ee4312b93234a1a45165b4c7aea9a361c62469", code=INVALID_ARGUMENT, version=address/5.6.0)
+Create State in React
+short term memory
+
+`useState` and `useEffect`
+when page loads what am I going to go ahead and execute.
+
+watch `useEffect` tutorial lmfao.
+> Side Effects on a functional component
+
+lifecycle methods
+components mounts and unmounts.
+
+about to render, after render, receives new props, execute piece of code
+this is new and functional programming.
+
+functional component and class based component.
+
+**summary**
+useEffect with no array dependency - re-render
+useEffect with empty array dependency - component mount
+useEffect with non-empty array dependency - unmount.
+
+import `useNFTDrop` from thirdweb
+
+damn the tooling is fucking insane.
+auto-imports are fucking welcome as shit.
+
+>Unhandled Runtime Error
+>Error: invalid address (argument="address", value="0x5113ff0b8e5b4c3f27a6fbd026ee4312b93234a1a45165b4c7aea9a361c62469", code=INVALID_ARGUMENT, version=address/5.6.0)
+
+error stops if I take out `useEffect` inside `NFTDrop`
+```      const claimed = await nftDrop.getAllClaimed()```
+sumn wrong with this function
+
+basically nftDrop is a huge object which is fucking crazy.
+
+BUT. getAllClaimed() is not working somehow?
+
+maybe I'm not calling `NFTDropPage` properly?
+because all functions on that mess up.
+
+i'm supposed to send contract props to it.
+
+the props work just as fine too.
+just got obj
+
+```
+  console.log('collection' + JSON.stringify(collection))
+
+```
+i give up resorting to the discord
