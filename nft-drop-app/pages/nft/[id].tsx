@@ -19,6 +19,7 @@ function NFTDropPage({ collection }: Props) {
   // console.log('collection' + JSON.stringify(collection))
   const [claimedSuppy, setClaimedSupply] = useState<number>(0)
   const [totalSupply, setTotalSupply] = useState<BigNumber>()
+  const [priceInEth, setpriceInEth] = useState<string>()
   const [loading, setLoading] = useState<boolean>(true)
   // thridweb drop contract
   const nftDrop = useNFTDrop(collection.address)
@@ -30,6 +31,15 @@ function NFTDropPage({ collection }: Props) {
 
   // console.log('address=', address)
   // ---
+
+  useEffect(() => {
+    if (!nftDrop) return
+    const fetchPrice = async () => {
+      const claimConditions = await nftDrop.claimConditions.getAll()
+      setpriceInEth(claimConditions?.[0].currencyMetadata.displayValue)
+    }
+    fetchPrice()
+  }, [nftDrop])
 
   useEffect(() => {
     if (!nftDrop) return
@@ -48,6 +58,31 @@ function NFTDropPage({ collection }: Props) {
     }
     fetchNFTDropData()
   }, [nftDrop])
+
+  // Mint Function
+  const mintNFT = () => {
+    if (!nftDrop || !address) return
+
+    // how many unique NFTs
+    // TODO: implement a custom button for different amount of NFTs
+    const quantity = 1
+
+    nftDrop
+      .claimTo(address, quantity)
+      .then(async (tx) => {
+        const receipt = tx[0].receipt // tx receipt
+        const claimedTokenId = tx[0].id // id of NFT
+        const claimedNFT = await tx[0].data() // claimed NFT metadata
+
+        // notification
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }
 
   return (
     <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
@@ -96,7 +131,6 @@ function NFTDropPage({ collection }: Props) {
               : 'Sign In'}
           </button>
         </header>
-
         <hr className="my-4 border" />
         {address && (
           <p className="text-center text-sm text-purple-500">
@@ -107,7 +141,6 @@ function NFTDropPage({ collection }: Props) {
             </span>
           </p>
         )}
-
         {/* Content */}
         <div className="flex flex-col items-center space-y-3 text-center lg:justify-center lg:space-y-2">
           <section className="container flex h-40 flex-col items-center justify-center lg:h-80">
@@ -125,7 +158,7 @@ function NFTDropPage({ collection }: Props) {
 
           {/* loading animation */}
           {loading ? (
-            <p className="pt-2 text-sm text-green-500">
+            <p className="animate-pulse pt-2 text-sm text-green-500">
               Loading Supply Count...
             </p>
           ) : (
@@ -133,25 +166,35 @@ function NFTDropPage({ collection }: Props) {
               {claimedSuppy} / {totalSupply?.toString()} NFT's claimed
             </p>
           )}
-        </div>
 
+          {loading && (
+            <img
+              className="h-40 w-40 object-contain"
+              src="https://cdn.dribbble.com/users/765253/screenshots/2540865/media/0b4964cb75da7968f8feabba4d481c39.gif"
+              alt="loading-animation"
+            />
+          )}
+        </div>
         {/* Mint Button */}
+
         <button
-          // disabled={
-          //   loading || claimedSuppy === totalSupply?.toNumber() || !address
-          // }
+          onClick={mintNFT}
+          disabled={
+            loading || claimedSuppy === totalSupply?.toNumber() || !address
+          }
           className="m-5 h-16 rounded-full bg-cyan-700 text-white disabled:bg-gray-400"
         >
-          {/* {loading ? (
+          {loading ? (
             <>Loading</>
-          ): claimedSuppy === totalSupply?.toNumber() ? (
+          ) : claimedSuppy === totalSupply?.toNumber() ? (
             <>SOLD OUT!</>
-          ): !address ?(
+          ) : !address ? (
             <>Sign in to Mint :D</>
-          ): (
-
-          )} */}
-          Mint NFT <span className="font-bold">(0.01 ΞTH)</span>
+          ) : (
+            <>
+              Mint NFT <span className="font-bold">({priceInEth} ΞTH)</span>
+            </>
+          )}
         </button>
         <div></div>
       </div>

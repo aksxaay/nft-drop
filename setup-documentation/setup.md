@@ -341,3 +341,23 @@ just got obj
 
 ```
 i give up resorting to the discord
+
+turns out the runtime error had some other weird obscure contract name no idea what the fuck.
+
+but I'm sure I only copied what was presented to me LMFAO.
+but in sanity studio the address was off so that's why.
+
+once I got it back we were all gucci.
+![](collection-sanity-studio.png)
+![](third-web-contract-address.png)
+yeah.
+
+### Loading Animation
+
+yeah well just picked up some animation that looks better than the default
+
+also implemented NFT functions.
+
+make the NFT popup, with the attributes so that is apparenty upto us.
+
+**mint successful**

@@ -34,7 +34,7 @@ const Home = ({ collections }: Props) => {
                   <img
                     className="h-96 w-[45rem] rounded-2xl object-cover"
                     src={urlFor(collection.mainImage)}
-                    alt=""
+                    alt="mainImage"
                   />
                   <div>
                     <h2 className="text-3xl font-medium">{collection.title}</h2>
