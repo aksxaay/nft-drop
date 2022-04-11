@@ -360,7 +360,62 @@ also implemented NFT functions.
 
 make the NFT popup, with the attributes so that is apparenty upto us.
 
+
+## Minting Experience
+
 **mint successful**
 
 
 we're getting hot toast alert notifications
+
+
+
+I minted but the artwork is missing RIP.
+
+here's dissonance chan minted but i can't find the host link
+[dissonance-chan minted](https://testnets.opensea.io/assets/0x74906df8744aeadeb3b480a03f791594a4937a8b/0)
+
+another example token
+[azuki testnet](https://rinkeby.etherscan.io/address/0xb74bf94049d2c01f8805b8b15db0909168cabf46)
+
+
+also don't use the trademark º because that shows up as bruh.
+
+click on token
+[token metadata json](https://ikzttp.mypinata.cloud/ipfs/QmQFkLSQysj94s5GvTHPyzTxrawwtjgiiYS2TBLgrvw8CW/182)
+
+when you click the token number that shows the ipfs hosted data place.
+I think I messed up my shii
+
+there's also the embed code right here
+[embed code thirdweb](https://thirdweb.com/dashboard/rinkeby/nft-drop/0x74906df8744AEADeb3B480a03f791594a4937a8B?tabIndex=3)
+
+
+nvm it fucking works
+
+[ipfs // dissonance-chan](ipfs://QmSA8Q2D78gYCMQzLsMuqcDWQ8apxxuLsu2uY6JidgaVjr/0.png)
+
+
+wait ipfs links are blocked in india?
+
+eventually became a dweb link?
+so I guess it is hosted somewhere?
+[dweb ipfs hosted link](https://dweb.link/ipfs/QmdWCanWn4cY7g5nCqfjGmGUz13U48knDd5pyXG5p4XTMs/0)
+
+on brave if we visit `brave://ipfs` we get to change the public gateway address
+
+
+finally we get dissonance chan after some struggle
+[dissonance-chan](https://bafybeibyxsvhwketqcpr7qidl4rqj4qjpdh2bejide5r7k7ti5s5r75wpu.ipfs.dweb.link/0.png)
+
+it does work I have to contact wacks on how to exactly pull this off.
+
+why does the NFT have a pink background gotta check out how it's being hosted on sanity?
+
+
+now I have to also figure out how to **burn** those tokens as well.
+
+and also how to randomize?
+
+`lsof -i tcp` check what ports are in use
+(list open files) -i using internet addresses and ports.
