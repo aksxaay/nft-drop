@@ -518,3 +518,15 @@ also change the `folder: build` to `folder: out` because next.js follows that.
 this thing tried to make me commit straight to the damn **main** branch, but I'm instead configuring it differently.
 
 `.github/workflows/node.js.yml` is what it was committing to. so might as well do it locally them commit to remote repo.
+
+
+somehow it can't detect the lock file so that's sad as fuck. but also if I move the .github workflow folder it doesn't even run.
+
+
+okay I'm getting into docker then I suppose i'm forced bruh.
+
+
+i'm gonna try a subtree method.
+
+[subtree subfolder gh-pages](https://gist.github.com/cobyism/4730490)
+

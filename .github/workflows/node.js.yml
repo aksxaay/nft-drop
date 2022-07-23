@@ -33,4 +33,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # branch: gh-pages # test this later separate github pages branch
-          folder: out # The folder the action should deploy.
+          folder: ./nft-drop-app/out # The folder the action should deploy.
