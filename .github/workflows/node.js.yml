@@ -31,7 +31,7 @@ jobs:
           cache: "yarn"
           cache-dependency-path: nft-drop-app/yarn.lock
 
-      - run: npm ci
+      - run: yarn install --immutable --immutable-cache --check-cache
         working-directory: ./nft-drop-app
 
       - run: npm run build
