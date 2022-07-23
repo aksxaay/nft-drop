@@ -498,3 +498,23 @@ other youtubers weren't getting the same kinda errors i was. But it basically go
 `~/Documents/coding_projects/git/nft-drop/nft-drop-app/out`
 
 `.gitignore` has the `out` folder ousted
+
+
+Actions -> Configure Node.js
+
+yeah and I have to edit the `node.js.yaml` file so that it understand what has to be done.
+i'm sure this is a docker configuration.
+
+`npm run build` and `npm run export`
+
+now we add github pages github action :D
+
+we're also gonna find this [actions // deploy to github pages](https://github.com/marketplace/actions/deploy-to-github-pages) on the marketplace
+
+and copy the last few lines.
+
+also change the `folder: build` to `folder: out` because next.js follows that.
+
+this thing tried to make me commit straight to the damn **main** branch, but I'm instead configuring it differently.
+
+`.github/workflows/node.js.yml` is what it was committing to. so might as well do it locally them commit to remote repo.
