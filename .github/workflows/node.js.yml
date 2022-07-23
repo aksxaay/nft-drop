@@ -28,7 +28,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: "yarn"
+          cache-dependency-path: nft-drop-app/yarn.lock
 
       - run: npm ci
         working-directory: ./nft-drop-app
