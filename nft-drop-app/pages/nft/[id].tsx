@@ -5,7 +5,7 @@ import {
   useMetamask,
   useNFTDrop,
 } from '@thirdweb-dev/react'
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps, GetStaticPaths } from 'next'
 import { sanityClient, urlFor } from '../../sanity'
 import Link from 'next/link'
 import { BigNumber } from 'ethers'
@@ -239,6 +239,61 @@ function NFTDropPage({ collection }: Props) {
 
 export default NFTDropPage
 
+// This function gets called at build time
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Call an external API endpoint to get posts
+  const query = `*[_type == "collection"]{
+    _id,
+    title,
+    address,
+    description,
+    nftCollectionName,
+    mainImage {
+     asset
+  },
+  previewImage {
+    asset
+  },
+  slug {
+    current
+  },
+  creator-> {
+    _id,
+    name,
+    address,
+    slug {
+    current
+  },
+  },
+  
+  }`
+  const collections = await sanityClient.fetch(query)
+  console.log('collections', collections)
+
+  // Get the paths we want to pre-render based on posts
+  const paths = collections.map((collection: { _id: any }) => ({
+    params: { id: collection._id },
+  }))
+
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return {
+    paths,
+    // : [
+    //   {
+    //     params: { postId: '1' },
+    //   },
+    //   {
+    //     params: { postId: '2' },
+    //   },
+    //   {
+    //     params: { postId: '3' },
+    //   },
+    // ]
+    fallback: false,
+  }
+}
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `*[_type == "collection" && slug.current == $id][0]{
     _id,
@@ -266,6 +321,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   
   }`
   const collection = await sanityClient.fetch(query, {
+    // params? as optional (typescript)
     id: params?.id,
   })
 

@@ -484,3 +484,17 @@ pages with `getServerSideProps` cannot be exported
 so the `getServerSideProps` are something that's used only during the sanity calls, maybe if I can just tweak them it should be theoretically be able to work.
 
 okay it seems to be a success after running `npm run dev`
+
+okay the conversion isn't as easy as I made it out to be.
+I need to also use `getStaticPaths` also runs only during build time.
+
+basic explanation is tha we'll be having multiple data in there, and we need to give a map to next js so it can predict what to render. Dynamic SSG.\
+
+
+to test the end condition i'm going to try and generate 3 pages basically.
+
+okay I somehow fixed this shit,
+other youtubers weren't getting the same kinda errors i was. But it basically goes to the out folder
+`~/Documents/coding_projects/git/nft-drop/nft-drop-app/out`
+
+`.gitignore` has the `out` folder ousted
