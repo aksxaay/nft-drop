@@ -546,3 +546,10 @@ this?
 another modification where I kept repeating `working-directory` again and again. we'll see.
 
 
+okay I think I finally ran into a much realer problem.
+
+uhh this is far more serious lmao.
+I can't find a way to give the ci cd access like bruh.
+respository is also public. bruh.
+
+oh github has a `.env` function / feature I can use.
