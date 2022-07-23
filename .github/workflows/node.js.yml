@@ -29,12 +29,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+        working-directory: ./nft-drop-app
+
       - run: npm ci
+        working-directory: ./nft-drop-app
+
       - run: npm run build
+        working-directory: ./nft-drop-app
+
       - run: npm run export
+        working-directory: ./nft-drop-app
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # branch: dev # test this later separate github pages branch
           folder: out # The folder the action should deploy.
+          working-directory: ./nft-drop-app
