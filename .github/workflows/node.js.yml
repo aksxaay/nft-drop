@@ -29,7 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-        working-directory: ./nft-drop-app
 
       - run: npm ci
         working-directory: ./nft-drop-app
@@ -45,4 +44,3 @@ jobs:
         with:
           # branch: dev # test this later separate github pages branch
           folder: out # The folder the action should deploy.
-          working-directory: ./nft-drop-app
