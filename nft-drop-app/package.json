@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
+
   },
   "dependencies": {
     "@sanity/cli": "^2.29.3",

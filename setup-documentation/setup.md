@@ -419,3 +419,64 @@ and also how to randomize?
 
 `lsof -i tcp` check what ports are in use
 (list open files) -i using internet addresses and ports.
+
+
+
+okay I have to figure out how to host this damn thing on Github Pages.
+
+github tells me the main branch isnt protected from force pushes and merges
+
+*branch protection rules* i suppose
+
+okay while i was cross checking for any leaked api keys or any such matter of similar severity, 
+i looked into etherscan and apparently rinkeby testnet eth is getting deprecated soon enough?
+either we have to migrate or re-deploy on *Goerli* or *Sepolia?*
+
+[Ethereum Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation/)?
+
+> Kiln, Ropsten and Rinkeby are now deprecated
+
+> After The Merge happens on mainnet, Kiln will be sunset. Then, by the end of the year, Ropsten will be as well. Roughly one year after Sepolia has transitioned to proof-of-stake, around Q2/Q3 2023, Rinkeby will be turned off.
+
+so rinkeby too has one more year.
+if these NFTs want to be sorta long lasting idk i guess I maintain it on Rinkeby?
+
+> only maintained ones, Goerli and Sepolia
+
+
+anyways back to github pages
+github is for **static pages** only. can't add next js repository either.
+
+- we have to convert our website into a static site.
+
+### Deploy
+
+- [github pages for next js application](https://www.youtube.com/watch?v=dalXCXCIPHM)
+- pretty useful ig.
+
+
+okay apparently I have to build and shit?
+let's try.
+
+I have to run 
+`npm run build`
+puts build files in the `.next` folder
+
+i'm getting 
+> Type 'ImageUrlBuilder' is not assignable to type 'string'.
+
+./pages/index.tsx:36:21
+
+fixed that following the syntax that is important.
+
+says no ESLint config detected, gotta setup lint config as well?
+
+now running
+`npm run export`
+
+no `exportPathMap` found in next.config.js
+apparently that's only a warning.
+
+here's the rest of the deal.
+pages with `getServerSideProps` cannot be exported
+[read here // gssp-export](https://nextjs.org/docs/messages/gssp-export)

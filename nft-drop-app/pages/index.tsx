@@ -33,7 +33,7 @@ const Home = ({ collections }: Props) => {
                 <div className="flex cursor-pointer flex-col items-center p-5 transition-all duration-300 hover:scale-[103%]">
                   <img
                     className="h-96 w-[45rem] rounded-2xl object-cover"
-                    src={urlFor(collection.mainImage)}
+                    src={urlFor(collection.mainImage).url()}
                     alt="mainImage"
                   />
                   <div>
