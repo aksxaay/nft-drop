@@ -5,13 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ["dev"]
+    branches: ['dev']
   pull_request:
-    branches: ["dev"]
-
-defaults:
-  run:
-    working-directory: ./nft-drop-app
+    branches: ['dev']
 
 jobs:
   build:
@@ -28,7 +24,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - run: npm ci
       - run: npm run build
       - run: npm run export
@@ -36,5 +32,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # branch: dev # test this later separate github pages branch
+          # branch: gh-pages # test this later separate github pages branch
           folder: out # The folder the action should deploy.
