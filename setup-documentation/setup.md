@@ -480,3 +480,7 @@ apparently that's only a warning.
 here's the rest of the deal.
 pages with `getServerSideProps` cannot be exported
 [read here // gssp-export](https://nextjs.org/docs/messages/gssp-export)
+
+so the `getServerSideProps` are something that's used only during the sanity calls, maybe if I can just tweak them it should be theoretically be able to work.
+
+okay it seems to be a success after running `npm run dev`

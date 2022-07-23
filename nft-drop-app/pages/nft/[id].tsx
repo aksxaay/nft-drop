@@ -5,7 +5,7 @@ import {
   useMetamask,
   useNFTDrop,
 } from '@thirdweb-dev/react'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import { sanityClient, urlFor } from '../../sanity'
 import Link from 'next/link'
 import { BigNumber } from 'ethers'
@@ -239,7 +239,7 @@ function NFTDropPage({ collection }: Props) {
 
 export default NFTDropPage
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `*[_type == "collection" && slug.current == $id][0]{
     _id,
     title,
