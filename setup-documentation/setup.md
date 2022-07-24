@@ -562,3 +562,13 @@ another approach for [secret variables](https://stackoverflow.com/questions/6639
 
 
 maybe recreating the error is key to something.
+
+
+
+tried to create my own .env but that ain't working either
+
+because the head command is only giving 
+```
+SANITY_API_TOKEN: 
+NEXT_P
+```

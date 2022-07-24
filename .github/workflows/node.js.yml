@@ -36,8 +36,8 @@ jobs:
 
       - name: create .env file
         env:
-          sanity_api: ${{ secrets.SANITY_API_TOKEN }}
-          projectId: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          sanity_api: { { secrets.SANITY_API_TOKEN } }
+          projectId: { { secrets.NEXT_PUBLIC_SANITY_PROJECT_ID } }
         run: |
           touch .env.local
           echo "SANITY_API_TOKEN: $sanity_api" >> .env.local
