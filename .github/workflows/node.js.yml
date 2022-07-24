@@ -42,6 +42,7 @@ jobs:
           touch .env.local
           echo "NEXT_PUBLIC_SANITY_PROJECT_ID: $projectId" >> .env.local
           echo "SANITY_API_TOKEN: $sanity_api" >> .env.local
+          head -c 25 .env.local
         working-directory: ./nft-drop-app
 
       - name: NPM run Build
