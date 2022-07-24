@@ -553,3 +553,9 @@ I can't find a way to give the ci cd access like bruh.
 respository is also public. bruh.
 
 oh github has a `.env` function / feature I can use.
+
+okay I tried everything apparently I had to also mention those variables on the damn idk i forgor bruh.
+but also I didn't get it rip.
+
+this is the last thing left to test
+another approach for [secret variables](https://stackoverflow.com/questions/66398572/cannot-access-environment-secrets-variables-passing-it-from-gh-pages-to-reactapp/66629983#66629983)
