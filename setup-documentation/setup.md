@@ -559,3 +559,6 @@ but also I didn't get it rip.
 
 this is the last thing left to test
 another approach for [secret variables](https://stackoverflow.com/questions/66398572/cannot-access-environment-secrets-variables-passing-it-from-gh-pages-to-reactapp/66629983#66629983)
+
+
+maybe recreating the error is key to something.
