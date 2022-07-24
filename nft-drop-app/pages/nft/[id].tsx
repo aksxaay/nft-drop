@@ -268,7 +268,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   
   }`
   const collections = await sanityClient.fetch(query)
-  console.log('collections', collections)
+  // console.log('collections', collections)
 
   // Get the paths we want to pre-render based on posts
   const paths = collections.map((collection: { _id: any }) => ({

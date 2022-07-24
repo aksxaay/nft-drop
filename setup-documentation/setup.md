@@ -581,3 +581,7 @@ I"VE BEEN USING THE WRONG SHIT BRO WHAT.
 
 
 HOW THE FUCK IS IT STILL WRONG
+
+
+i give up it literally censored the damn things and even then it would'nt run right.
+I think some process in the whole build thing is messing things up idk.
