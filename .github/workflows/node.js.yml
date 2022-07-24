@@ -38,9 +38,10 @@ jobs:
         env:
           sanity_api: ${{ secrets.SANITY_API_TOKEN }}
           projectId: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
-        run: echo "SANITY_API_TOKEN: $sanity_api" >> .env.local
-        working-directory: ./nft-drop-app
-        run: echo "NEXT_PUBLIC_SANITY_PROJECT_ID: $projectId" >> .env.local
+        run: |
+          touch .env.local
+          echo "NEXT_PUBLIC_SANITY_PROJECT_ID: $projectId" >> .env.local
+          echo "SANITY_API_TOKEN: $sanity_api" >> .env.local
         working-directory: ./nft-drop-app
         run: npm run build
         working-directory: ./nft-drop-app
