@@ -1,3 +1,16 @@
+- [setup](#setup)
+  - [Prettier](#prettier)
+    - [Format on Save](#format-on-save)
+    - [third-web](#third-web)
+  - [Day 3](#day-3)
+    - [sanity.io](#sanityio)
+    - [thirdweb](#thirdweb)
+    - [Day 4](#day-4)
+    - [Loading Animation](#loading-animation)
+  - [Minting Experience](#minting-experience)
+    - [Deploy](#deploy)
+    - [unrelated](#unrelated)
+
 # setup
 
 Here's where I'll be taking y'all through the process
@@ -30,7 +43,7 @@ Sorting TailwindCSS class Auto with Prettier
 but we also get to keep the `package.json` file around.
 just we have a `yarn.lock`
 
-## **Prettier**
+## Prettier
 
 setup `.prettierrc.json` file that tells the project that we use prettier
 
@@ -585,3 +598,37 @@ HOW THE FUCK IS IT STILL WRONG
 
 i give up it literally censored the damn things and even then it would'nt run right.
 I think some process in the whole build thing is messing things up idk.
+
+i'm going to have to run this by like literally cloning my repo and finding out what's wrong.
+
+
+### unrelated
+we decided we need around 1000 NFTs so that's that.
+but to make that happen, I should decide on a number.
+
+```
+The number of NFTs = (Number of traits) ^ (Number of layers)
+```
+so we decided on 
+5^4 = 625
+4^5 = 1024
+
+
+I have to get started on the art.
+
+I heard about TouchDesigner boutta find out what that's about.
+
+I also realized I can very easily target this at kids who can get started learning on NFTs and things and how to mint and how to claim and how to check out if its legit and whatnot.
+
+so yeah I uhh am converting my images and things, going okayish I think
+
+I ran 2 separate datasets each almost different
+but still ran into the same damn error when it's trying to initialize.
+
+> cannot import name 'notf' from 'tensorboard.compat'
+AND
+while it is trying to deal with this Exception
+> return sys.stdout.isatty()
+> AttributeError: 'Logger' object has no attribute 'isatty'
+
+I can't. Train my own damn thing.

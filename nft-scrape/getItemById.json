@@ -1,0 +1,235 @@
+{
+  "id": "ETHEREUM:0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:32292934596187112148346015918544186536963932779440027682601542850818403729410",
+  "blockchain": "ETHEREUM",
+  "collection": "ETHEREUM:0xb66a603f4cfe17e3d27b87a8bfcad319856518b8",
+  "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+  "tokenId": 123456,
+  "creators": [],
+  "lazySupply": 123456,
+  "pending": [],
+  "mintedAt": "2019-08-24T14:15:22Z",
+  "lastUpdatedAt": "2019-08-24T14:15:22Z",
+  "supply": 123456,
+  "meta": {
+    "name": "string",
+    "description": "string",
+    "createdAt": "2019-08-24T14:15:22Z",
+    "tags": ["string"],
+    "genres": ["string"],
+    "language": "string",
+    "rights": "string",
+    "rightsUri": "string",
+    "externalUri": "string",
+    "originalMetaUri": "string",
+    "attributes": [
+      {
+        "key": "string",
+        "value": "string",
+        "type": "string",
+        "format": "string"
+      }
+    ],
+    "content": [
+      {
+        "fileName": "string",
+        "url": "string",
+        "representation": "PREVIEW",
+        "mimeType": "image/png",
+        "size": 0,
+        "@type": "IMAGE",
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "restrictions": ["OWNERSHIP"]
+  },
+  "deleted": true,
+  "bestSellOrder": {
+    "id": "ETHEREUM:0x19f487016770542dc6137b06499a4f7b42c9580f12d85d6347964b03b7682143",
+    "fill": 123456.789,
+    "platform": "RARIBLE",
+    "status": "ACTIVE",
+    "startedAt": "2019-08-24T14:15:22Z",
+    "endedAt": "2019-08-24T14:15:22Z",
+    "makeStock": 123456.789,
+    "cancelled": true,
+    "createdAt": "2019-08-24T14:15:22Z",
+    "lastUpdatedAt": "2019-08-24T14:15:22Z",
+    "dbUpdatedAt": "2019-08-24T14:15:22Z",
+    "makePrice": 123456.789,
+    "takePrice": 123456.789,
+    "makePriceUsd": 123456.789,
+    "takePriceUsd": 123456.789,
+    "maker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "taker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "make": {
+      "type": {
+        "@type": "FLOW_NFT",
+        "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+        "tokenId": 123456
+      },
+      "value": 123456.789
+    },
+    "take": {
+      "type": {
+        "@type": "FLOW_NFT",
+        "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+        "tokenId": 123456
+      },
+      "value": 123456.789
+    },
+    "salt": "string",
+    "signature": "string",
+    "pending": [],
+    "data": {
+      "@type": "ETH_RARIBLE_V1",
+      "fee": 123456
+    }
+  },
+  "bestBidOrder": {
+    "id": "ETHEREUM:0x19f487016770542dc6137b06499a4f7b42c9580f12d85d6347964b03b7682143",
+    "fill": 123456.789,
+    "platform": "RARIBLE",
+    "status": "ACTIVE",
+    "startedAt": "2019-08-24T14:15:22Z",
+    "endedAt": "2019-08-24T14:15:22Z",
+    "makeStock": 123456.789,
+    "cancelled": true,
+    "createdAt": "2019-08-24T14:15:22Z",
+    "lastUpdatedAt": "2019-08-24T14:15:22Z",
+    "dbUpdatedAt": "2019-08-24T14:15:22Z",
+    "makePrice": 123456.789,
+    "takePrice": 123456.789,
+    "makePriceUsd": 123456.789,
+    "takePriceUsd": 123456.789,
+    "maker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "taker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "make": {
+      "type": {
+        "@type": "FLOW_NFT",
+        "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+        "tokenId": 123456
+      },
+      "value": 123456.789
+    },
+    "take": {
+      "type": {
+        "@type": "FLOW_NFT",
+        "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+        "tokenId": 123456
+      },
+      "value": 123456.789
+    },
+    "salt": "string",
+    "signature": "string",
+    "pending": [],
+    "data": {
+      "@type": "ETH_RARIBLE_V1",
+      "fee": 123456
+    }
+  },
+  "originOrders": [
+    {
+      "origin": "string",
+      "bestSellOrder": {
+        "id": "ETHEREUM:0x19f487016770542dc6137b06499a4f7b42c9580f12d85d6347964b03b7682143",
+        "fill": 123456.789,
+        "platform": "RARIBLE",
+        "status": "ACTIVE",
+        "startedAt": "2019-08-24T14:15:22Z",
+        "endedAt": "2019-08-24T14:15:22Z",
+        "makeStock": 123456.789,
+        "cancelled": true,
+        "createdAt": "2019-08-24T14:15:22Z",
+        "lastUpdatedAt": "2019-08-24T14:15:22Z",
+        "dbUpdatedAt": "2019-08-24T14:15:22Z",
+        "makePrice": 123456.789,
+        "takePrice": 123456.789,
+        "makePriceUsd": 123456.789,
+        "takePriceUsd": 123456.789,
+        "maker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+        "taker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+        "make": {
+          "type": {
+            "@type": "FLOW_NFT",
+            "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+            "tokenId": 123456
+          },
+          "value": 123456.789
+        },
+        "take": {
+          "type": {
+            "@type": "FLOW_NFT",
+            "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+            "tokenId": 123456
+          },
+          "value": 123456.789
+        },
+        "salt": "string",
+        "signature": "string",
+        "pending": [],
+        "data": {
+          "@type": "ETH_RARIBLE_V1",
+          "fee": 123456
+        }
+      },
+      "bestBidOrder": {
+        "id": "ETHEREUM:0x19f487016770542dc6137b06499a4f7b42c9580f12d85d6347964b03b7682143",
+        "fill": 123456.789,
+        "platform": "RARIBLE",
+        "status": "ACTIVE",
+        "startedAt": "2019-08-24T14:15:22Z",
+        "endedAt": "2019-08-24T14:15:22Z",
+        "makeStock": 123456.789,
+        "cancelled": true,
+        "createdAt": "2019-08-24T14:15:22Z",
+        "lastUpdatedAt": "2019-08-24T14:15:22Z",
+        "dbUpdatedAt": "2019-08-24T14:15:22Z",
+        "makePrice": 123456.789,
+        "takePrice": 123456.789,
+        "makePriceUsd": 123456.789,
+        "takePriceUsd": 123456.789,
+        "maker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+        "taker": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+        "make": {
+          "type": {
+            "@type": "FLOW_NFT",
+            "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+            "tokenId": 123456
+          },
+          "value": 123456.789
+        },
+        "take": {
+          "type": {
+            "@type": "FLOW_NFT",
+            "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+            "tokenId": 123456
+          },
+          "value": 123456.789
+        },
+        "salt": "string",
+        "signature": "string",
+        "pending": [],
+        "data": {
+          "@type": "ETH_RARIBLE_V1",
+          "fee": 123456
+        }
+      }
+    }
+  ],
+  "auctions": [],
+  "totalStock": 123456,
+  "sellers": 0,
+  "lastSale": {
+    "date": "2019-08-24T14:15:22Z",
+    "seller": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "buyer": "ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb",
+    "value": 123456.789,
+    "currency": {
+      "@type": "FLOW_NFT",
+      "contract": "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430",
+      "tokenId": 123456
+    },
+    "price": 123456.789
+  }
+}
