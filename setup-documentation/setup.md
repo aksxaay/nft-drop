@@ -632,3 +632,17 @@ while it is trying to deal with this Exception
 > AttributeError: 'Logger' object has no attribute 'isatty'
 
 I can't. Train my own damn thing.
+
+
+
+
+nft-generator - 100 free beyond which it's paid
+nft-bueno
+
+
+okay so the prolem is also that, the no code doesn't really generate the things that we don't want so that's tough
+
+yeah I brought this to their attention it seems we're good to go. I know have to speak with one of the moderators on deekay's discord to get the go sign approval.
+
+
+What if I could code if they had any valuables on their account, I won't even let them mint.

@@ -66,3 +66,9 @@ so basically I couldn't get GIMP to scale either, and PIL was causing most of th
 OMG I just had to bump back the version on the google colab, why didn't I get that right away, I'm such a noob
 
 man.
+
+nvm it was all for naught, google colab has a rate limiter, can't use as much GPUs anymore.
+
+I still have to flip my assets
+
+
