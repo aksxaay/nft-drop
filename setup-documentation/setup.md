@@ -646,3 +646,89 @@ yeah I brought this to their attention it seems we're good to go. I know have to
 
 
 What if I could code if they had any valuables on their account, I won't even let them mint.
+
+
+Anyways I've decided to go along with hashlips minting thing.
+
+[HashLips Art Engine](https://github.com/HashLips/hashlips_art_engine.git)
+
+thinking of adding it as a submodule?
+
+`git submodule add https://github.com/HashLips/hashlips_art_engine.git`
+
+now `yarn install`
+
+okay I replicated the Layer that they wanted it as.
+
+made the layers
+growEditionSize = 5
+and debugging enabled.
+
+you can also have blending modes? that's kinda cool.
+
+images will be found in `build/images` directory
+
+just run `npm build` or `node index.js`
+
+
+run the `combined command`
+
+```sh
+mkdir -p build/combined &&
+cp -R build/{images,json}/. build/combined/
+```
+
+apparently there was some transaction error
+```
+Contract transaction failed
+
+Message: 
+
+| Transaction info |
+
+from:      0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7
+to:        0x74906df8744AEADeb3B480a03f791594a4937a8B
+chain:     rinkeby (4)
+
+Need help with this error? Join our community: https://discord.gg/thirdweb
+
+
+
+| Raw error |
+
+{"originalError":{}}
+```
+lmao what.
+
+
+okay I have to deploy on NFTDrop contract.
+
+- set claimPhase
+
+
+they say that the uploading is an off-chain possibility, that's crazy, they could probably determine which one had which rarity and things. that's actually crazy.
+
+I should drop a form link asking for their wallet address and that's about it.
+
+so it seems to work, I did receive back the same amount again.
+
+but also opensea test networks hasn't shown the information yet. we'll see.
+
+okay things are starting to get a little confusing, because i can't seem to find what the ethereum on polygon is actually called, I mean they have their own token but like bruh.
+
+naur I had it wrong, its the same eth, just on different networks
+
+here's the [opensea testnetwork mumbai network](https://testnets.opensea.io/collection/dissonance-mirrored-fren-v2)
+
+i'm gonna mint again and then finally reveal to see if that makes a difference
+
+yeah as I guessed it just barely updated.
+now for the reveal.
+
+basically you have to click 'Reveal NFT' on top, and pay gas that's about it.
+
+okay after reveal lemme check out where it was uploaded and things.
+
+okay but the problem was it revealed everything, didn't leave anything
+
+in that case I have to set it to reveal right after mint but also somehow keep it unrevealed.
