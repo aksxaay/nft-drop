@@ -16,6 +16,11 @@ const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
 
 
 const main = async () => {
+
+  // account balance before
+  let balance = await provider.getBalance(SENDER)
+  console.log(`Balance: ${ethers.utils.formatEther(balance)}\n`)
+
   // send transaction
   const tx = await wallet.sendTransaction({
     to: SENDER,
@@ -24,6 +29,9 @@ const main = async () => {
 
   // fetch transaction
   await tx.wait()
+  balance = await provider.getBalance(SENDER)
+  console.log(`Balance: ${ethers.utils.formatEther(balance)}\n`)
+
   return tx
 }
 
