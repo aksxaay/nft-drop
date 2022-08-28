@@ -177,3 +177,5 @@ holy fucking shit this actually worked and I love myself
 [successful safeTransferFrom method call // rinkeby.etherscan](https://rinkeby.etherscan.io/tx/0x0148c0a7b9112f7e0aff4900bb7d8d7b9cb5bd3070acd740190fa6a518d8da13)
 
 okay time to commit I guess
+
+time to work on `utils.js` that handles addresses and listing them and similar things.
