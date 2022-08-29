@@ -4,5 +4,7 @@ function load(filename) {
   return array;
 }
 
-let address_list = load("./address_list.txt");
-console.log(address_list)
+// let address_list = load("./address_list.txt");
+// console.log(address_list);
+
+module.exports = { load };

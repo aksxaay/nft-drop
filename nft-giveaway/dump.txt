@@ -1,0 +1,82 @@
+[
+  '0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7',
+  '0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7',
+  '0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7'
+]
+submitted tx 0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7
+submitted tx 0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7
+submitted tx 0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7
+gas_price: 1.50000002 gwei
+DSNCE (ºdissonance) total supply is 1
+DSNCE (ºdissonance) total supply is 1
+DSNCE (ºdissonance) total supply is 1
+focus {
+  type: 2,
+  chainId: 4,
+  nonce: 48,
+  maxPriorityFeePerGas: BigNumber { _hex: '0x59682f00', _isBigNumber: true },
+  maxFeePerGas: BigNumber { _hex: '0x59682f14', _isBigNumber: true },
+  gasPrice: null,
+  gasLimit: BigNumber { _hex: '0xb2bf', _isBigNumber: true },
+  to: '0x74906df8744AEADeb3B480a03f791594a4937a8B',
+  value: BigNumber { _hex: '0x00', _isBigNumber: true },
+  data: '0x42842e0e00000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca700000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca70000000000000000000000000000000000000000000000000000000000000000',
+  accessList: [],
+  hash: '0x857751a92a0e54e95ec9b3a26e341d4be45cd1b18450431a1a29f5511dddfef7',
+  v: 0,
+  r: '0x7cba19e5f2325c1cddd778f6a7bc0bace98af2e857e02b9cffdb27723764ed12',
+  s: '0x3bf4203f577bac68c93e287165bec396fc96faae42ed4f02389d43f640d1a8c9',
+  from: '0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7',
+  confirmations: 0,
+  wait: [Function (anonymous)]
+}
+/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/logger/lib/index.js:238
+        var error = new Error(message);
+                    ^
+
+Error: processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":83,\"error\":{\"code\":-32000,\"message\":\"already known\"}}", error={"code":-32000}, requestBody="{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f8cf04308459682f008459682f1482b2bf9474906df8744aeadeb3b480a03f791594a4937a8b80b86442842e0e00000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca700000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca70000000000000000000000000000000000000000000000000000000000000000c080a07cba19e5f2325c1cddd778f6a7bc0bace98af2e857e02b9cffdb27723764ed12a03bf4203f577bac68c93e287165bec396fc96faae42ed4f02389d43f640d1a8c9\"],\"id\":83,\"jsonrpc\":\"2.0\"}", requestMethod="POST", url="https://rinkeby.infura.io/v3/c66070450cec4366b3c84bfb0e99ca41", code=SERVER_ERROR, version=web/5.7.0)
+    at Logger.makeError (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:308:32
+    at step (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.next (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at fulfilled (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  reason: 'processing response error',
+  code: 'SERVER_ERROR',
+  body: '{"jsonrpc":"2.0","id":83,"error":{"code":-32000,"message":"already known"}}',
+  error: Error: already known
+      at getResult (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:191:21)
+      at processJsonFunc (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:351:22)
+      at /home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:283:46
+      at step (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:33:23)
+      at Object.next (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:14:53)
+      at fulfilled (/home/axsae/Documents/coding_projects/git/nft-drop/node_modules/@ethersproject/web/lib/index.js:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    code: -32000,
+    data: undefined
+  },
+  requestBody: '{"method":"eth_sendRawTransaction","params":["0x02f8cf04308459682f008459682f1482b2bf9474906df8744aeadeb3b480a03f791594a4937a8b80b86442842e0e00000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca700000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca70000000000000000000000000000000000000000000000000000000000000000c080a07cba19e5f2325c1cddd778f6a7bc0bace98af2e857e02b9cffdb27723764ed12a03bf4203f577bac68c93e287165bec396fc96faae42ed4f02389d43f640d1a8c9"],"id":83,"jsonrpc":"2.0"}',
+  requestMethod: 'POST',
+  url: 'https://rinkeby.infura.io/v3/c66070450cec4366b3c84bfb0e99ca41',
+  transaction: {
+    type: 2,
+    chainId: 4,
+    nonce: 48,
+    maxPriorityFeePerGas: BigNumber { _hex: '0x59682f00', _isBigNumber: true },
+    maxFeePerGas: BigNumber { _hex: '0x59682f14', _isBigNumber: true },
+    gasPrice: null,
+    gasLimit: BigNumber { _hex: '0xb2bf', _isBigNumber: true },
+    to: '0x74906df8744AEADeb3B480a03f791594a4937a8B',
+    value: BigNumber { _hex: '0x00', _isBigNumber: true },
+    data: '0x42842e0e00000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca700000000000000000000000048bf6779fba7ec911da7420409a134c4d3ff5ca70000000000000000000000000000000000000000000000000000000000000000',
+    accessList: [],
+    hash: '0x857751a92a0e54e95ec9b3a26e341d4be45cd1b18450431a1a29f5511dddfef7',
+    v: 0,
+    r: '0x7cba19e5f2325c1cddd778f6a7bc0bace98af2e857e02b9cffdb27723764ed12',
+    s: '0x3bf4203f577bac68c93e287165bec396fc96faae42ed4f02389d43f640d1a8c9',
+    from: '0x48BF6779fBa7eC911DA7420409A134C4d3Ff5ca7',
+    confirmations: 0
+  },
+  transactionHash: '0x857751a92a0e54e95ec9b3a26e341d4be45cd1b18450431a1a29f5511dddfef7'
+}

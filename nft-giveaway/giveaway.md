@@ -179,3 +179,5 @@ holy fucking shit this actually worked and I love myself
 okay time to commit I guess
 
 time to work on `utils.js` that handles addresses and listing them and similar things.
+
+i'm unable to find a solution for the gasEstimate.
