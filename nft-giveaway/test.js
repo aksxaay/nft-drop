@@ -29,11 +29,14 @@ async function main() {
 
   let contract = new ethers.Contract(CONTRACT, dissonanceABI, wallet);
 
+
   const utils = require("./utils");
   let address_list = await utils.load("./address_list.txt");
   console.log(address_list);
 
-  async function tx(RECEIVER) {
+  
+
+  async function tx(RECEIVER, tokenId) {
     const name = await contract.name();
     const symbol = await contract.symbol();
     const totalSupply = await contract.totalSupply();
@@ -43,7 +46,7 @@ async function main() {
     const message = await contract["safeTransferFrom(address,address,uint256)"](
       SENDER,
       RECEIVER,
-      0
+      tokenId
     );
 
     console.log("focus", message);
@@ -53,9 +56,13 @@ async function main() {
     });
   }
 
-  for (let address of address_list) {
-    console.log("submitted tx", address);
-    tx(address);
+  // similar to python enumerate
+  let tokenAmount = await utils.getSupply(contract);
+  address_list.length = tokenAmount
+
+  for (let [index, address] of address_list.entries()) {
+    console.log("submitted tx! token:", index,'to', address);
+    // tx(address, index);
   }
 }
 

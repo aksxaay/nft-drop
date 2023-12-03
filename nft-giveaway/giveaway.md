@@ -181,3 +181,9 @@ okay time to commit I guess
 time to work on `utils.js` that handles addresses and listing them and similar things.
 
 i'm unable to find a solution for the gasEstimate.
+
+- need to pull total minted amount and them randomize the array()
+
+might've succeeded let's fucking go?
+
+this one time taking a really long ass transaction?
